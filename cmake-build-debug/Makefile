@@ -123,6 +123,33 @@ GeneticAlgorithm/fast:
 	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/build
 .PHONY : GeneticAlgorithm/fast
 
+city.o: city.cpp.o
+
+.PHONY : city.o
+
+# target to build an object file
+city.cpp.o:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/city.cpp.o
+.PHONY : city.cpp.o
+
+city.i: city.cpp.i
+
+.PHONY : city.i
+
+# target to preprocess a source file
+city.cpp.i:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/city.cpp.i
+.PHONY : city.cpp.i
+
+city.s: city.cpp.s
+
+.PHONY : city.s
+
+# target to generate assembly for a file
+city.cpp.s:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/city.cpp.s
+.PHONY : city.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,6 +177,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+tour.o: tour.cpp.o
+
+.PHONY : tour.o
+
+# target to build an object file
+tour.cpp.o:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/tour.cpp.o
+.PHONY : tour.cpp.o
+
+tour.i: tour.cpp.i
+
+.PHONY : tour.i
+
+# target to preprocess a source file
+tour.cpp.i:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/tour.cpp.i
+.PHONY : tour.cpp.i
+
+tour.s: tour.cpp.s
+
+.PHONY : tour.s
+
+# target to generate assembly for a file
+tour.cpp.s:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/tour.cpp.s
+.PHONY : tour.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +213,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... GeneticAlgorithm"
 	@echo "... edit_cache"
+	@echo "... city.o"
+	@echo "... city.i"
+	@echo "... city.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... tour.o"
+	@echo "... tour.i"
+	@echo "... tour.s"
 .PHONY : help
 
 
