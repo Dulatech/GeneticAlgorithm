@@ -26,6 +26,7 @@ public:
     bool operator == (const tour& t) const;
     bool contains_city(city c);
     void printTour();
+    bool operator<(const tour& t) const;
 
 
 

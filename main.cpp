@@ -23,6 +23,11 @@ int main() {
     g.selection(p);
     p.printPopulation();
 
+    std::cout << " " << std::endl;
+    std::cout << " " << std::endl;
+    std::cout << "After Selection of Parents:" << std::endl;
+    g.select_parents(p);
+
 
 
 

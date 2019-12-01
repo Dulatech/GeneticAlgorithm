@@ -64,7 +64,7 @@ double tour::determine_fitness() {
 }
 
 bool tour::operator==(const tour &t) const {
-    return ((fitnessRating == t.fitnessRating) && (distance == t.distance) && (cities == t.cities));
+    return fitnessRating == t.fitnessRating;
 }
 
 bool tour::contains_city(city c) {
@@ -78,4 +78,8 @@ void  tour::printTour(){
         std::cout << *it<<std::endl;
     }
 
+}
+
+bool tour::operator<(const tour &t) const {
+    return (fitnessRating>t.fitnessRating);
 }

@@ -21,8 +21,8 @@ private:
 
 public:
     genetic_algorithm();
-    void selection(population &pop);
-    std::vector<tour> select_parents(population &pop);
+    void selection(population &p);
+    std::vector<tour> select_parents(population &p);
     tour crossover(tour t1, tour t2);
     void mutate(tour &t);
     void evaluation();
