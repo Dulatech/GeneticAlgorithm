@@ -26,7 +26,12 @@ int main() {
     std::cout << " " << std::endl;
     std::cout << " " << std::endl;
     std::cout << "After Selection of Parents:" << std::endl;
-    g.select_parents(p);
+    std::vector<tour> tt = g.select_parents(p);
+
+
+    std::cout << "After Crossover:" << std::endl;
+    g.crossover(tt);
+
 
 
 

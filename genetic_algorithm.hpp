@@ -23,7 +23,7 @@ public:
     genetic_algorithm();
     void selection(population &p);
     std::vector<tour> select_parents(population &p);
-    tour crossover(tour t1, tour t2);
+    tour crossover(std::vector<tour> &parents);
     void mutate(tour &t);
     void evaluation();
     void report();

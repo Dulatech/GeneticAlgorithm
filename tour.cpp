@@ -83,3 +83,8 @@ void  tour::printTour(){
 bool tour::operator<(const tour &t) const {
     return (fitnessRating>t.fitnessRating);
 }
+
+std::vector<city> &tour::getTour() {
+    return cities;
+}
+

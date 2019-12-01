@@ -52,8 +52,39 @@ std::vector<tour> genetic_algorithm::select_parents(population &p) {
 }
 
 
-tour genetic_algorithm::crossover(tour t1, tour t2) {
-    return tour();
+tour genetic_algorithm::crossover(std::vector<tour> &parents) {
+    tour child;
+    std::vector<city> p1 = parents.at(0).getTour();
+    std::cout << "Parent 1: " <<std::endl;
+    for (auto it =  p1.begin() ; it !=  p1.end(); ++it)
+    {
+        std::cout << *it<<std::endl;
+    }
+
+    std::vector<city> p2 =  parents.at(1).getTour();
+    std::cout << "Parent 2: " <<std::endl;
+    for (auto it =  p2.begin() ; it !=  p2.end(); ++it)
+    {
+        std::cout << *it<<std::endl;
+    }
+    std::random_device seeder;
+    std::mt19937 engine(seeder());
+    std::uniform_int_distribution<int> dist(0, 31);
+    int k = dist(engine);
+
+    for (int i = 0; i <= k; ++i) {
+        child.getTour().push_back(p1.at(i));
+    }
+    while(k<32){
+        if (!child.contains_city(p2.at(k))) {
+            child.getTour().push_back(p2.at(k));
+        }
+        k++;
+    }
+
+    std::cout << "Child: " <<std::endl;
+    child.printTour();
+    return child;
 }
 
 void genetic_algorithm::mutate(tour &t) {
