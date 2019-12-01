@@ -12,7 +12,6 @@
 class tour {
 protected:
     constexpr static int MAP_BOUNDARY =1000;
-    constexpr static int SHUFFLES = 64;
     constexpr static int CITIES_IN_TOUR = 32;
     std::vector<city> cities;
     double fitnessRating;

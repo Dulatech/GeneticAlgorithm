@@ -35,20 +35,17 @@ void tour::create_group() {
 }
 
 void tour::shuffle_cities() {
-    for (int i = 0; i < SHUFFLES; ++i) {
         auto rng = std::default_random_engine {};
-        std::shuffle(std::begin(cities), std::end(cities), rng);
-    }
+        std::shuffle(cities.begin(), cities.end(), rng);
 }
 
 int tour::get_tour_distance() {
-    if (distance == 0) {
         int tourDistance = 0;
-        for (int cityIndex = 0; cityIndex < CITIES_IN_TOUR; cityIndex++) {
-            city fromCity = cities.at(cityIndex);
+        for (int i = 0; i < CITIES_IN_TOUR; i++) {
+            city fromCity = cities.at(i);
             city toCity;
-            if (cityIndex + 1 < CITIES_IN_TOUR) {
-                toCity = cities.at(cityIndex + 1);
+            if (i + 1 < CITIES_IN_TOUR) {
+                toCity = cities.at(i + 1);
             }
             else {
                 toCity = cities.at(0);
@@ -56,14 +53,13 @@ int tour::get_tour_distance() {
             tourDistance += (int) fromCity.get_distance_between_cities(toCity);
         }
         distance = tourDistance;
-    }
-    return distance;
+
+        return distance;
 }
 
 double tour::determine_fitness() {
-    if (fitnessRating == 0) {
         fitnessRating = (1/(double) get_tour_distance())*10000;
-    }
+
     return fitnessRating;
 }
 

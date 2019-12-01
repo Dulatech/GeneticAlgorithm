@@ -9,9 +9,18 @@
 #include "tour.hpp"
 
 class population {
-    constexpr static int POPULATION_SIZE = 32;
+
 private:
+    constexpr static int POPULATION_SIZE = 32;
     std::vector<tour> tours;
+
+public:
+    void populate();
+    tour find_fittest();
+    void printPopulation();
+
+
+
 
 };
 
