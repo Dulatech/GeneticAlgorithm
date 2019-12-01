@@ -10,7 +10,7 @@
 
 class population {
 
-private:
+protected:
     constexpr static int POPULATION_SIZE = 32;
     std::vector<tour> tours;
 
@@ -18,7 +18,7 @@ public:
     void populate();
     tour find_fittest();
     void printPopulation();
-
+    std::vector<tour>& getPopulation();
 
 
 

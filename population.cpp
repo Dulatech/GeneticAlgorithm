@@ -24,6 +24,10 @@ tour population::find_fittest() {
     return fittestTour;
 }
 
+std::vector<tour> &population::getPopulation() {
+    return tours;
+}
+
 void population::printPopulation() {
     int count = 1;
     for (auto it = tours.begin() ; it != tours.end(); ++it)

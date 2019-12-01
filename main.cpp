@@ -3,6 +3,7 @@
 #include <algorithm>
 #include "tour.hpp"
 #include "population.hpp"
+#include "genetic_algorithm.hpp"
 
 int main() {
     population p;
@@ -13,6 +14,16 @@ int main() {
 
     tour t = p.find_fittest();
     std::cout <<"Fittest Tour " <<t.determine_fitness() << std::endl;
+
+
+    std::cout << " " << std::endl;
+    std::cout << " " << std::endl;
+    std::cout << "After Selection:" << std::endl;
+    genetic_algorithm g;
+    g.selection(p);
+    p.printPopulation();
+
+
 
 
     return 0;

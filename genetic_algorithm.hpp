@@ -2,13 +2,13 @@
 // Created by david on 11/30/2019.
 //
 
-#ifndef GENETICALGORITHM_GENERIC_ALGORITHM_HPP
-#define GENETICALGORITHM_GENERIC_ALGORITHM_HPP
+#ifndef GENETICALGORITHM_GENETIC_ALGORITHM_HPP
+#define GENETICALGORITHM_GENETIC_ALGORITHM_HPP
 
 
 #include "population.hpp"
 
-class generic_algorithm {
+class genetic_algorithm {
 private:
     constexpr static int ITERATIONS = 1000;
     constexpr static int PARENT_POOL_SIZE = 5;
@@ -20,7 +20,9 @@ private:
     int base_distance;
 
 public:
-    void selection(population &p);
+    genetic_algorithm();
+    void selection(population &pop);
+    std::vector<tour> select_parents(population &pop);
     tour crossover(tour t1, tour t2);
     void mutate(tour &t);
     void evaluation();
@@ -33,4 +35,4 @@ public:
 };
 
 
-#endif //GENETICALGORITHM_GENERIC_ALGORITHM_HPP
+#endif //GENETICALGORITHM_GENETIC_ALGORITHM_HPP
