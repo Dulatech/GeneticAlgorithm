@@ -10,9 +10,24 @@
 #include "city.hpp"
 
 class tour {
-private:
+protected:
+    constexpr static int MAP_BOUNDARY =1000;
+    constexpr static int SHUFFLES = 64;
+    constexpr static int CITIES_IN_TOUR = 32;
     std::vector<city> cities;
     double fitnessRating;
+    int distance;
+
+public:
+    tour();
+    void create_group();
+    void shuffle_cities();
+    int get_tour_distance();
+    double determine_fitness();
+    bool operator == (const tour& t) const;
+    bool contains_city(city c);
+    void printTour();
+
 
 
 
