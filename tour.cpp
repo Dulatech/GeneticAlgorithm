@@ -7,9 +7,15 @@
 #include <iostream>
 #include "tour.hpp"
 
+/**
+ * Default Constructor sets the fitness and distance to 0
+ */
 tour::tour() : fitnessRating(0), distance(0) {
 }
 
+/**
+ * crates a random group of cities
+ */
 void tour::create_group() {
     for (int i = 0; i < CITIES_IN_TOUR; ++i) {
         std::string str("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
@@ -35,11 +41,18 @@ void tour::create_group() {
     fitnessRating = determine_fitness();
 }
 
+/**
+ * shuffles the cities in random order
+ */
 void tour::shuffle_cities() {
         auto rng = std::default_random_engine {};
         std::shuffle(cities.begin(), cities.end(), rng);
 }
 
+/**
+ * gets the distance of the entire tour
+ * @return
+ */
 int tour::get_tour_distance() {
         int dist = 0;
         for (int i = 0; i < CITIES_IN_TOUR; i++) {
@@ -58,21 +71,40 @@ int tour::get_tour_distance() {
         return distance;
 }
 
+/**
+ * determines fitness level of the entire tour
+ *
+ * @return
+ */
 double tour::determine_fitness() {
         fitnessRating = (1/(double) get_tour_distance())*10000;
 
     return fitnessRating;
 }
 
+/**
+ *
+ * @param t
+ * @return
+ */
 bool tour::operator==(const tour &t) const {
     return fitnessRating == t.fitnessRating;
 }
 
+/**
+ * checks if tours contains a specific city
+ *
+ * @param c
+ * @return
+ */
 bool tour::contains_city(city c) {
     auto it = std::find (cities.begin(), cities.end(), c);
     return it != cities.end();
 }
 
+/**
+ * prints the cities in the tour
+ */
 void  tour::printTour(){
     for (auto it = cities.begin() ; it != cities.end(); ++it)
     {
@@ -81,10 +113,21 @@ void  tour::printTour(){
 
 }
 
+/**
+ * comparison operator for doing sort function
+ *
+ * @param t
+ * @return
+ */
 bool tour::operator<(const tour &t) const {
     return (fitnessRating>t.fitnessRating);
 }
 
+/**
+ * gets the tour (city list) for easier editing
+ *
+ * @return
+ */
 std::vector<city> &tour::getTour() {
     return cities;
 }

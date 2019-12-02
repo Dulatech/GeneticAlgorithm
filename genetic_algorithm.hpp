@@ -17,7 +17,7 @@ private:
     constexpr static int NUMBER_OF_ELITES = 1;
     constexpr static int POPULATION_SIZE = 32;
     constexpr static int CITIES_IN_TOUR = 32;
-    constexpr static double IMPROVEMENT_FACTOR = 0.60;
+    constexpr static double IMPROVEMENT_FACTOR = 0.55;
     int best_distance;
     int base_distance;
 

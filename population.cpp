@@ -5,6 +5,9 @@
 #include <iostream>
 #include "population.hpp"
 
+/**
+ * populates the population with randomly shuffles cities
+ */
 void population::populate() {
     tour t;
     t.create_group();
@@ -14,6 +17,11 @@ void population::populate() {
     }
 }
 
+/**
+ * finds the tour with the highest fitness
+ *
+ * @return
+ */
 tour population::find_fittest() {
     auto fittestTour = tours.at(0);
     for (auto it = tours.begin() + 1; it < tours.end(); ++it) {
@@ -24,12 +32,19 @@ tour population::find_fittest() {
     return fittestTour;
 }
 
+/**
+ * returns the tour list for easier modification
+ *
+ * @return
+ */
 std::vector<tour> &population::getPopulation() {
     return tours;
 }
 
 
-
+/**
+ * prints the information of each tour
+ */
 void population::printPopulation() {
     int count = 1;
     for (auto it = tours.begin() ; it != tours.end(); ++it)
@@ -45,6 +60,11 @@ void population::printPopulation() {
     }
 }
 
+/**
+ * had to implement due to bug where I was creating null populations
+ *
+ * @param t
+ */
 void population::set_population(std::vector <tour> &t) {
     tours = t;
 }

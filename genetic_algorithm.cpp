@@ -8,6 +8,11 @@
 #include <iomanip>
 #include "genetic_algorithm.hpp"
 
+/**
+ * Crates a population.
+ * Runs the genetic algorithm 1000 times or until desired improvement has been achieved.
+ * Prints the status of algorithm
+ */
 genetic_algorithm::genetic_algorithm() {
     population basePop;
     basePop.populate();
@@ -29,7 +34,8 @@ genetic_algorithm::genetic_algorithm() {
 //        std::cout << "Improved By: " << basePop.find_fittest().get_tour_distance() <<std::endl;
         std::cout << "Improvement over Base: " << improvement * 100 << "%" <<std::endl;
 
-iterations++;
+
+        iterations++;
     }
     std::cout << "*******************RESULTS*******************" << std::endl;
     std::cout << "Total Iteration: " << iterations <<std::endl;
@@ -46,12 +52,14 @@ iterations++;
 
     std::cout << "----------Best Tour:---------" << std::endl;
     basePop.find_fittest().printTour();
-
-
-
-
 }
 
+/**
+ * simple genetic algorithm function that applies the selection(), crossover(),
+ * and mutation() on the population.
+ *
+ * @param p
+ */
 void genetic_algorithm::evolution(population &p) {
     population copy;
     tour fittestTour = p.find_fittest();
@@ -64,8 +72,12 @@ void genetic_algorithm::evolution(population &p) {
         tour child = crossover(parents);
         holder.push_back(child);
     }
-    for (int i = NUMBER_OF_ELITES; i < POPULATION_SIZE; i++) {
-        mutate(holder.at(i));
+    for (int i = 0; i < POPULATION_SIZE*30/100; i++) {
+        std::random_device seeder2;
+        std::mt19937 engine2(seeder2());
+        std::uniform_int_distribution<int> dist2(1, CITIES_IN_TOUR-1);
+        int k = dist2(engine2);
+        mutate(holder.at(k));
     }
     copy.set_population(holder);
     p = copy;
@@ -74,6 +86,11 @@ void genetic_algorithm::evolution(population &p) {
 
 }
 
+/**
+ * Keeps the best tour by moving the fittest to the front of the population.
+ *
+ * @param p
+ */
 void genetic_algorithm::selection(population &p) {
     tour fittest = p.find_fittest();
     for (auto it = p.getPopulation().begin(); it != p.getPopulation().end(); ++it) {
@@ -85,6 +102,12 @@ void genetic_algorithm::selection(population &p) {
 
 }
 
+/**
+ * Selects the parents from a population to create a child.
+ *
+ * @param p
+ * @return
+ */
 std::vector<tour> genetic_algorithm::select_parents(population &p) {
 
     std::vector<tour> parents;
@@ -107,7 +130,12 @@ std::vector<tour> genetic_algorithm::select_parents(population &p) {
     return parents;
 }
 
-
+/**
+ * Creates a new child tour from the two parents chosen.
+ *
+ * @param parents
+ * @return
+ */
 tour genetic_algorithm::crossover(std::vector<tour> &parents) {
     tour child;
     std::vector<city> p1 = parents.at(0).getTour();
@@ -123,19 +151,24 @@ tour genetic_algorithm::crossover(std::vector<tour> &parents) {
     for (int i = 0; i <= k; ++i) {
         child.getTour().push_back(p1.at(i));
     }
-    int newCount = 0;
+    int j = 0;
     while(child.getTour().size()<POPULATION_SIZE){
-        if (!child.contains_city(p2.at(newCount))) {
-            child.getTour().push_back(p2.at(newCount));
+        if (!child.contains_city(p2.at(j))) {
+            child.getTour().push_back(p2.at(j));
 
         }
-        newCount++;
+        j++;
     }
     child.get_tour_distance();
     child.determine_fitness();
     return child;
 }
 
+/**
+ * Mutates a tour by swapping cities
+ *
+ * @param t
+ */
 void genetic_algorithm::mutate(tour &t) {
     for(int i=0; i < CITIES_IN_TOUR; i++){
         std::random_device seeder;
