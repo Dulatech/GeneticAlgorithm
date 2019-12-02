@@ -15,7 +15,7 @@ private:
     constexpr static double MUTATION_RATE = 0.15;
     constexpr static int NUMBER_OF_PARENTS = 2;
     constexpr static int NUMBER_OF_ELITES = 1;
-    constexpr static int improvement_factor = 0.50;
+    constexpr static double IMPROVEMENT_FACTOR = 0.50;
     int best_distance;
     int base_distance;
 
