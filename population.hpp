@@ -19,6 +19,7 @@ public:
     tour find_fittest();
     void printPopulation();
     std::vector<tour>& getPopulation();
+    void set_population(std::vector<tour> &t);
 
 
 

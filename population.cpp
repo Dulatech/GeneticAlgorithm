@@ -28,6 +28,8 @@ std::vector<tour> &population::getPopulation() {
     return tours;
 }
 
+
+
 void population::printPopulation() {
     int count = 1;
     for (auto it = tours.begin() ; it != tours.end(); ++it)
@@ -41,5 +43,9 @@ void population::printPopulation() {
         count++;
 
     }
+}
+
+void population::set_population(std::vector <tour> &t) {
+    tours = t;
 }
 

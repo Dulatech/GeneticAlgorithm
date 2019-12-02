@@ -109,18 +109,18 @@ CMakeFiles/GeneticAlgorithm.dir/population.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticAlgorithm.dir/population.cpp.s"
 	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/population.cpp -o CMakeFiles/GeneticAlgorithm.dir/population.cpp.s
 
-CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.o: CMakeFiles/GeneticAlgorithm.dir/flags.make
-CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.o: ../generic_algorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.o"
-	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.o -c /cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/generic_algorithm.cpp
+CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.o: CMakeFiles/GeneticAlgorithm.dir/flags.make
+CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.o: ../genetic_algorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.o"
+	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.o -c /cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/genetic_algorithm.cpp
 
-CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.i"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/generic_algorithm.cpp > CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.i
+CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.i"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/genetic_algorithm.cpp > CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.i
 
-CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.s"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/generic_algorithm.cpp -o CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.s
+CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.s"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/genetic_algorithm.cpp -o CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.s
 
 # Object files for target GeneticAlgorithm
 GeneticAlgorithm_OBJECTS = \
@@ -128,7 +128,7 @@ GeneticAlgorithm_OBJECTS = \
 "CMakeFiles/GeneticAlgorithm.dir/city.cpp.o" \
 "CMakeFiles/GeneticAlgorithm.dir/tour.cpp.o" \
 "CMakeFiles/GeneticAlgorithm.dir/population.cpp.o" \
-"CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.o"
+"CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.o"
 
 # External object files for target GeneticAlgorithm
 GeneticAlgorithm_EXTERNAL_OBJECTS =
@@ -137,7 +137,7 @@ GeneticAlgorithm.exe: CMakeFiles/GeneticAlgorithm.dir/main.cpp.o
 GeneticAlgorithm.exe: CMakeFiles/GeneticAlgorithm.dir/city.cpp.o
 GeneticAlgorithm.exe: CMakeFiles/GeneticAlgorithm.dir/tour.cpp.o
 GeneticAlgorithm.exe: CMakeFiles/GeneticAlgorithm.dir/population.cpp.o
-GeneticAlgorithm.exe: CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.o
+GeneticAlgorithm.exe: CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.o
 GeneticAlgorithm.exe: CMakeFiles/GeneticAlgorithm.dir/build.make
 GeneticAlgorithm.exe: CMakeFiles/GeneticAlgorithm.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable GeneticAlgorithm.exe"

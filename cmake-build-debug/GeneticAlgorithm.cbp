@@ -86,10 +86,10 @@
 		<Unit filename="/cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/city.hpp">
 			<Option target="GeneticAlgorithm"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/generic_algorithm.cpp">
+		<Unit filename="/cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/genetic_algorithm.cpp">
 			<Option target="GeneticAlgorithm"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/generic_algorithm.hpp">
+		<Unit filename="/cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/genetic_algorithm.hpp">
 			<Option target="GeneticAlgorithm"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/david/CLionProjects/GeneticAlgorithm/main.cpp">

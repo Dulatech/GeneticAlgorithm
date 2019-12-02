@@ -7,7 +7,8 @@
 #include <iostream>
 #include "tour.hpp"
 
-tour::tour() : fitnessRating(0), distance(0) { }
+tour::tour() : fitnessRating(0), distance(0) {
+}
 
 void tour::create_group() {
     for (int i = 0; i < CITIES_IN_TOUR; ++i) {
@@ -40,7 +41,7 @@ void tour::shuffle_cities() {
 }
 
 int tour::get_tour_distance() {
-        int tourDistance = 0;
+        int dist = 0;
         for (int i = 0; i < CITIES_IN_TOUR; i++) {
             city fromCity = cities.at(i);
             city toCity;
@@ -50,9 +51,9 @@ int tour::get_tour_distance() {
             else {
                 toCity = cities.at(0);
             }
-            tourDistance += (int) fromCity.get_distance_between_cities(toCity);
+            dist += (int) fromCity.get_distance_between_cities(toCity);
         }
-        distance = tourDistance;
+        distance = dist;
 
         return distance;
 }

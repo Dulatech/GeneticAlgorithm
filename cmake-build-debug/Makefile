@@ -150,32 +150,32 @@ city.cpp.s:
 	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/city.cpp.s
 .PHONY : city.cpp.s
 
-generic_algorithm.o: generic_algorithm.cpp.o
+genetic_algorithm.o: genetic_algorithm.cpp.o
 
-.PHONY : generic_algorithm.o
+.PHONY : genetic_algorithm.o
 
 # target to build an object file
-generic_algorithm.cpp.o:
-	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.o
-.PHONY : generic_algorithm.cpp.o
+genetic_algorithm.cpp.o:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.o
+.PHONY : genetic_algorithm.cpp.o
 
-generic_algorithm.i: generic_algorithm.cpp.i
+genetic_algorithm.i: genetic_algorithm.cpp.i
 
-.PHONY : generic_algorithm.i
+.PHONY : genetic_algorithm.i
 
 # target to preprocess a source file
-generic_algorithm.cpp.i:
-	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.i
-.PHONY : generic_algorithm.cpp.i
+genetic_algorithm.cpp.i:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.i
+.PHONY : genetic_algorithm.cpp.i
 
-generic_algorithm.s: generic_algorithm.cpp.s
+genetic_algorithm.s: genetic_algorithm.cpp.s
 
-.PHONY : generic_algorithm.s
+.PHONY : genetic_algorithm.s
 
 # target to generate assembly for a file
-generic_algorithm.cpp.s:
-	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/generic_algorithm.cpp.s
-.PHONY : generic_algorithm.cpp.s
+genetic_algorithm.cpp.s:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/genetic_algorithm.cpp.s
+.PHONY : genetic_algorithm.cpp.s
 
 main.o: main.cpp.o
 
@@ -270,9 +270,9 @@ help:
 	@echo "... city.o"
 	@echo "... city.i"
 	@echo "... city.s"
-	@echo "... generic_algorithm.o"
-	@echo "... generic_algorithm.i"
-	@echo "... generic_algorithm.s"
+	@echo "... genetic_algorithm.o"
+	@echo "... genetic_algorithm.i"
+	@echo "... genetic_algorithm.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
