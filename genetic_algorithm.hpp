@@ -12,7 +12,7 @@ class genetic_algorithm {
 private:
     constexpr static int ITERATIONS = 1000;
     constexpr static int PARENT_POOL_SIZE = 5;
-    constexpr static int MUTATION_RATE = 0.15;
+    constexpr static double MUTATION_RATE = 0.15;
     constexpr static int NUMBER_OF_PARENTS = 2;
     constexpr static int NUMBER_OF_ELITES = 1;
     constexpr static int improvement_factor = 0.50;
@@ -20,12 +20,11 @@ private:
     int base_distance;
 
 public:
-    genetic_algorithm();
+    void natural_selection();
     void selection(population &p);
     std::vector<tour> select_parents(population &p);
     tour crossover(std::vector<tour> &parents);
     void mutate(tour &t);
-    void evaluation();
     void report();
 
 
